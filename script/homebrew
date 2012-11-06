@@ -17,3 +17,5 @@ fi
 
 # Install grc and coreutils
 brew install grc coreutils
+
+brew install tree bash-completion sshuttle wget hub
