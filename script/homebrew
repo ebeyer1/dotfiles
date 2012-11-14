@@ -8,8 +8,7 @@
 # Check for Homebrew
 if test ! $(which brew)
 then
-  echo "  x You should probably install Homebrew first:"
-  echo "    https://github.com/mxcl/homebrew/wiki/installation"
+  ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
   exit
 else
   echo "  + Homebrew found."
