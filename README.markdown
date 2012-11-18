@@ -1,4 +1,4 @@
-# holman does dotfiles
+# waltflanagan does dotfiles
 
 ## dotfiles
 
