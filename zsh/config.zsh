@@ -4,6 +4,9 @@ else
   export PS1='%3~$(git_info_for_prompt)%# '
 fi
 
+setopt extendedglob
+unsetopt CASE_GLOB
+
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
