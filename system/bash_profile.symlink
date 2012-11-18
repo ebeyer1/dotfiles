@@ -25,6 +25,6 @@ alias ls='ls -G'
 
 GIT_PS1_SHOWDIRTYSTATE=true
 
-PS1='\[\033[39m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\n☞  '
+PS1='\[\033[39m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\nಠ_ಠ '
 
 source "`brew --prefix grc`/etc/grc.bashrc"
