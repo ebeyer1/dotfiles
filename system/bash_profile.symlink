@@ -1,0 +1,30 @@
+PATH="$PATH:/usr/local/bin"
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
+# Tell ls to be colourful
+export CLICOLOR=1
+
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+
+#When running two bash windows, allow both to write to the history, not one stomping the other
+shopt -s histappend
+
+#Remove duplicates from history
+export HISTCONTROL="ignoredups"
+export HISTIGNORE="&:ls:[bf]g:exit"
+
+#Keep multiline commands as one command in history
+shopt -s cmdhist
+
+alias git='xcrun git'
+alias ls='ls -G'
+
+GIT_PS1_SHOWDIRTYSTATE=true
+
+PS1='\[\033[39m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\n☞  '
+
+source "`brew --prefix grc`/etc/grc.bashrc"
