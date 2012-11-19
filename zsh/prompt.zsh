@@ -16,7 +16,7 @@ git_dirty() {
     then
       echo "%{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
     else
-      echo "%{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%}"
+      echo "%{$fg_bold[red]%}$(git_prompt_info)%{$fg[green]%} ಠ_ಠ %{$reset_color%}"
     fi
   fi
 }
@@ -36,16 +36,16 @@ need_push () {
   then
     echo " "
   else
-    echo " with %{$fg_bold[magenta]%}unpushed%{$reset_color%} "
+    echo " %{$fg_bold[magenta]%}✈%{$reset_color%} "
   fi
 }
 
 
 directory_name(){
-  echo "%{$fg_bold[cyan]%}$(pwd|grep --color=always /)%{$reset_color%}"
+  echo "%{$fg_bold[cyan]%}${PWD/#$HOME/~}%{$reset_color%}"
 }
 
-export PROMPT=$'$(directory_name) ($(git_dirty))$(need_push)\nಠ_ಠ '
+export PROMPT=$'$(directory_name) ($(git_dirty))$(need_push)\n ⚗ '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
