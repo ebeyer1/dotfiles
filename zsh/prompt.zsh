@@ -14,9 +14,9 @@ git_dirty() {
   else
     if [[ $st == "nothing to commit (working directory clean)" ]]
     then
-      echo "%{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
+      echo "(%{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%})"
     else
-      echo "%{$fg_bold[red]%}$(git_prompt_info)%{$fg[green]%} ಠ_ಠ %{$reset_color%}"
+      echo "(%{$fg_bold[red]%}$(git_prompt_info)%{$fg[green]%} ಠ_ಠ %{$reset_color%})"
     fi
   fi
 }
@@ -45,7 +45,7 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}${PWD/#$HOME/~}%{$reset_color%}"
 }
 
-export PROMPT=$'$(directory_name) ($(git_dirty))$(need_push)\n ⚗ '
+export PROMPT=$'$(directory_name) $(git_dirty)$(need_push)\n ⚗ '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
