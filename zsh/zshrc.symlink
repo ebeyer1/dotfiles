@@ -5,7 +5,7 @@ export ZSH=$HOME/.dotfiles
 export PROJECTS=~/Code
 
 # initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit && compinit
+autoload -U compinit && compinit -i
 
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
