@@ -4,11 +4,14 @@ export ZSH=$HOME/.dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Code
 
-# initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit && compinit -i
-
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
+
+
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
+
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
