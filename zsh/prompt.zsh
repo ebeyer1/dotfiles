@@ -45,9 +45,9 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}${PWD/#$HOME/~}%{$reset_color%}"
 }
 
-export PROMPT=$'$(directory_name) $(git_super_status)$(need_push)\n %{$reset_color%}ಠ_ಠ '
+export PROMPT=$'$(directory_name)\n$(need_push)%{$reset_color%}ಠ_ಠ '
 set_prompt () {
-  export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
+  export RPROMPT="$(git_super_status)%{$reset_color%}"
 }
 
 precmd() {
