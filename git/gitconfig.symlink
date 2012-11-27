@@ -35,4 +35,4 @@
 [difftool "Kaleidoscope"]
 	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [push]
-	default = simple
+	default = tracking
