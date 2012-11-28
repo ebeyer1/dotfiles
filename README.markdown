@@ -13,7 +13,7 @@ subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 Run this:
 
 ```sh
-git clone https://github.com/holman/dotfiles.git ~/.dotfiles
+git clone https://github.com/waltflanagan/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
@@ -25,7 +25,7 @@ The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
 which sets up a few paths that'll be different on your particular machine.
 
 You'll also want to change `git/gitconfig.symlink`, which will set you up as
-committing as Zach Holman. You probably don't want that.
+committing as me. You probably don't want that.
 
 ## topical
 
