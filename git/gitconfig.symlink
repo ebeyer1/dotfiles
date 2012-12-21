@@ -5,8 +5,8 @@
 [hub]
         protocol = https
 [user]
-        name = Mike Simons
-        email = simonsm2@gmail.com
+        name = Eric Beyer
+        email = e.beyer@techsmith.com
 [alias]
         co = checkout
         promote = !$ZSH/bin/git-promote
