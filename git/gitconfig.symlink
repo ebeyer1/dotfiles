@@ -5,8 +5,8 @@
 [hub]
         protocol = https
 [user]
-        name = Eric Beyer
-        email = e.beyer@techsmith.com
+	name = Eric Beyer
+	email = e.beyer@techsmith.com
 [alias]
         co = checkout
         promote = !$ZSH/bin/git-promote
@@ -22,13 +22,14 @@
         branch = auto
         ui = true
 [core]
-        excludesfile = ~/.gitignore
+	excludesfile = /Users/e.beyer/.gitignore
         editor = nano
 	autocrlf = input
 [apply]
         whitespace = nowarn
 [mergetool]
         keepBackup = false
+	tool = SourceTree
 [difftool]
         prompt = false
         tool = Kaleidoscope
@@ -39,8 +40,17 @@
 [push]
 	default = tracking
 [difftool "sourcetree"]
-	cmd = /Applications/Kaleidoscope.app/Contents/MacOS/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = ksdiff $LOCAL $REMOTE $MERGED
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+	trustExitCode = true
+[diff]
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = diffmerge $LOCAL $REMOTE
